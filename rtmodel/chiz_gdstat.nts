@@ -1,0 +1,7 @@
+GDFILE  eta212                                                                                                                          
+GDOUTF  testme_indicies.gem                                                                                                             
+GDATTIM f006-f030                                                                                                                       
+GLEVEL  0                                                                                                                               
+GVCORD  none                                                                                                                            
+GFUNC   add(mul(quo(cape,3000),p03i),mul(quo(swet,350),c03i))                                                                           
+GRDNAM  chiz                                                                                                                            

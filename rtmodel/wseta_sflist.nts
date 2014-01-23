@@ -1,0 +1,6 @@
+SFFILE  wseta_region.sfc                                                                                                                
+AREA    @US:c                                                                                                                           
+DATTIM  all                                                                                                                             
+SFPARM  epcp>0;slat;slon                                                                                                                
+OUTPUT  f/wseta_forecast.dat                                                                                                            
+IDNTYP  stid                                                                                                                            

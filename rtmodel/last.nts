@@ -1,0 +1,7 @@
+GDFILE  wrf:co.gem                                                                                                                      
+LSTALL  y                                                                                                                               
+OUTPUT  t                                                                                                                               
+GDATTIM all                                                                                                                             
+GLEVEL  all                                                                                                                             
+GVCORD  all                                                                                                                             
+GFUNC   all                                                                                                                             

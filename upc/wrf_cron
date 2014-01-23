@@ -1,0 +1,20 @@
+#!/bin/csh -f
+set TOP=/machine/gempak/wrf/rtmodel
+
+if ( $#argv < 1 ) then
+  echo "Usage: $0 FHOUR"
+  exit
+else
+  set FHOUR=$argv[1]
+endif
+
+set YMD=`date -u '+%Y%m%d'`
+
+echo "Beginning WRF region runs for $YMD "
+
+# run WRF over Colorado
+/machine/gempak/wrf/upc/wrf_CO $YMD $FHOUR >>&! /machine/gempak/wrf/logs/autorun_co.log &
+wait
+exit;
+
+

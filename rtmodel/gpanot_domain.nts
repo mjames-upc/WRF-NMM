@@ -1,0 +1,13 @@
+GDFILE                                                                                                  
+SATFIL                                                                                                                                  
+RADFIL                                                                                                                                  
+PROJ    def                                                                                                                             
+GAREA   uslcc                                                                                                                           
+PANEL   0                                                                                                                               
+DEVICE  XW                                                                                                                              
+CLEAR   n                                                                                                                               
+SHAPE   marker                                                                                                                          
+INFO    4/20                                                                                                                            
+LOCI    #29.33;-89.40                                                                                                                   
+LINE    3                                                                                                                               
+CTYPE   C                                                                                                                               

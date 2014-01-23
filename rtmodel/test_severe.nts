@@ -1,0 +1,40 @@
+GDFILE  eta212                                                                                                                          
+GDATTIM f030                                                                                                                            
+GLEVEL  0                                                                                                                               
+GVCORD  none                                                                                                                            
+PANEL   t ! b                                                                                                                           
+SKIP    0/2;2                                                                                                                           
+SCALE   0                                                                                                                               
+GDPFUN  p24i ! gwfs(mul(mul(quo(sge(c24i,.01),p24i),quo(cape,3000)),p24i),20)                                                           
+TYPE    f ! f                                                                                                                           
+CONTUR  3/0                                                                                                                             
+CINT                                                                                                                                    
+LINE    5                                                                                                                               
+FINT    .01;.1;.25;.5;.75;1;1.25;1.5;1.75;2;2.5;3;4;5;6;7;8;9!.01;.1;.2;.3;.4;.5;.75;1;1.25;1.5;1.75;2;2.5;3;4;5;6;7                    
+FLINE   0;21-30;14-20;5                                                                                                                 
+HILO                                                                                                                                    
+HLSYM                                                                                                                                   
+CLRBAR  1/v/cl/.001;.5                                                                                                                  
+WIND    bk1                                                                                                                             
+REFVEC                                                                                                                                  
+TITLE   5/-1/WSETA Selected Region of Interest                                                                                          
+TEXT    .7/2/1/hw                                                                                                                       
+CLEAR   y                                                                                                                               
+GAREA   uslcc                                                                                                                           
+IJSKIP  0                                                                                                                               
+PROJ    LCC/30.0;-90.0;60.0                                                                                                             
+MAP     31/1/1                                                                                                                          
+MSCALE                                                                                                                                  
+LATLON  0                                                                                                                               
+DEVICE  xw                                                                                                                              
+STNPLT                                                                                                                                  
+SATFIL                                                                                                                                  
+RADFIL                                                                                                                                  
+IMCBAR  31/v/CL/.005;.5/.8;.01                                                                                                          
+LUTFIL  default                                                                                                                         
+STREAM                                                                                                                                  
+POSN    0                                                                                                                               
+COLORS  30 ! 24 ! 21 ! 18 ! 15 ! 11                                                                                                     
+MARKER  1                                                                                                                               
+GRDLBL  0                                                                                                                               
+FILTER  no                                                                                                                              

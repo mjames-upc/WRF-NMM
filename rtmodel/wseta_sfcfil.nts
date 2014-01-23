@@ -1,0 +1,7 @@
+SFOUTF  wseta_region.sfc                                                                                                                
+SFPRMF  EPCP                                                                                                                            
+!STNFIL  nexrad.tbl
+STNFIL  conus_mos.stn                                                                                                                   
+SHIPFL  no                                                                                                                              
+TIMSTN  24/200                                                                                                                          
+SFFSRC                                                                                                                                  

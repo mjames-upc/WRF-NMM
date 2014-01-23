@@ -1,0 +1,40 @@
+GDFILE  wseta                                                                                                                           
+GDATTIM fall                                                                                                                            
+GLEVEL  0                                                                                                                               
+GVCORD  none                                                                                                                            
+PANEL   0                                                                                                                               
+SKIP    0/2;2                                                                                                                           
+SCALE   0                                                                                                                               
+GDPFUN  p01i ! mask(sle(wxtr,0),sge(p01i,.01)) ! emsl                                                                                   
+TYPE    f ! f ! c                                                                                                                       
+CONTUR  3/0                                                                                                                             
+CINT    1 ! 1 ! 2
+LINE    5/1/1/2                                                                                                                         
+FINT    .01;.05;.1;.15;.2;.25;.3;.35;.4;.45;.5;.55;.6;.65;.7;.75;1;1.25 ! /.1;.1                                                        
+FLINE   0;21-30;14-20;5 ! 0;31/7                                                                                                        
+HILO    0                                                                                                                               
+HLSYM   2;1/2/32/2 ! ! 1.3                                                                                                              
+CLRBAR  0                                                                                                                               
+WIND    bk1                                                                                                                             
+REFVEC                                                                                                                                  
+TITLE   31/-2/Precip, SLP [? ~]                                                                                                         
+TEXT    .75/2/1/hw                                                                                                                      
+CLEAR   y                                                                                                                               
+GAREA   grid                                                                                                                            
+IJSKIP  0                                                                                                                               
+PROJ    def                                                                                                                             
+MAP     31/1/1                                                                                                                          
+MSCALE                                                                                                                                  
+LATLON  0                                                                                                                               
+DEVICE  xw||200;180                                                                                                                     
+STNPLT                                                                                                                                  
+SATFIL                                                                                                                                  
+RADFIL                                                                                                                                  
+IMCBAR                                                                                                                                  
+LUTFIL  default                                                                                                                         
+STREAM                                                                                                                                  
+POSN    0                                                                                                                               
+COLORS  7                                                                                                                               
+MARKER  1                                                                                                                               
+GRDLBL  0                                                                                                                               
+FILTER  no                                                                                                                              

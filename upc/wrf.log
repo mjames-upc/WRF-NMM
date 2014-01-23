@@ -1,0 +1,38 @@
+beginning ./wrf_CO
+sourcing WRF cshrc
+FDATE is 20140117/1200
+YMDH is 2014011712
+CYCLE is 12
+DOMAIN_NAME is 2014011712_12km_co
+GEMNMM is nmm_co
+RUNNAME is co
+DEFCLAT 40.035 DEFCLON -105.2436
+
+Source Root    = /machine/gempak/wrf/data/wrfsi
+Install Root   = /machine/gempak/wrf 
+Data Root      = /machine/gempak/wrf/runs/2014011712_12km_co
+Template Path  = /machine/gempak/wrf/data/domains/2014011712_12km_co 
+Config Domain  = true 
+removing leftover /machine/gempak/wrf/runs/2014011712_12km_co/static_err
+removing leftover /machine/gempak/wrf/runs/2014011712_12km_co/cdl_err
+Removing dataroot: /machine/gempak/wrf/runs/2014011712_12km_co
+Generate DATA_ROOT directory structure
+Copy template namelist files from /machine/gempak/wrf/data/domains/2014011712_12km_co to /machine/gempak/wrf/runs/2014011712_12km_co/static
+LAPS_TEMPLATE is /machine/gempak/wrf/data/domains/2014011712_12km_co 
+file is .. 
+file is nest_info.txt 
+Copy /machine/gempak/wrf/data/domains/2014011712_12km_co/nest_info.txt file to /machine/gempak/wrf/runs/2014011712_12km_co/static 
+file is wrf.nl 
+Copy /machine/gempak/wrf/data/domains/2014011712_12km_co/wrf.nl file to /machine/gempak/wrf/runs/2014011712_12km_co/static 
+file is grib_prep.nl 
+Copy /machine/gempak/wrf/data/domains/2014011712_12km_co/grib_prep.nl file to /machine/gempak/wrf/runs/2014011712_12km_co/static 
+file is wrfsi.nl 
+Copy /machine/gempak/wrf/data/domains/2014011712_12km_co/wrfsi.nl file to /machine/gempak/wrf/runs/2014011712_12km_co/static 
+file is . 
+file is dataroot.txt 
+file is wrfsi.nl.strc 
+Copy /machine/gempak/wrf/data/domains/2014011712_12km_co/wrfsi.nl.strc file to /machine/gempak/wrf/runs/2014011712_12km_co/static 
+Running /machine/gempak/wrf/etc/localize_domain.pl
+running localize_domain.pl with this command
+/usr/bin/perl /machine/gempak/wrf/etc/localize_domain.pl --dataroot=/machine/gempak/wrf/runs/2014011712_12km_co --srcroot=/machine/gempak/wrf/data/wrfsi --install_root=/machine/gempak/wrf --which_type=wrfsi.rotlat > /machine/gempak/wrf/runs/2014011712_12km_co/log/localize_domain.log
+ERROR: 65280 Command /usr/bin/perl /machine/gempak/wrf/etc/localize_domain.pl --dataroot=/machine/gempak/wrf/runs/2014011712_12km_co --srcroot=/machine/gempak/wrf/data/wrfsi --install_root=/machine/gempak/wrf --which_type=wrfsi.rotlat > /machine/gempak/wrf/runs/2014011712_12km_co/log/localize_domain.log failed:  

@@ -1,0 +1,8 @@
+GDFILE  nam40|last
+GDATTIM f030
+GVCORD  none
+GLEVEL  0
+GFUNC   gwfs(p24m,20)
+SCALE   0
+SFFILE  wseta_region.sfc
+SFPARM  epcp

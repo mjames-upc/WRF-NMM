@@ -1,0 +1,71 @@
+#!/bin/csh -f
+set TOP=/machine/gempak/wrf/rtmodel
+
+set NX=101
+set NY=155
+set DX=6000
+set DY=6000
+
+if ( ! $?WRF ) then
+   echo sourcing WRF cshrc
+   source /machine/gempak/wrf/WRF.cshrc
+endif
+
+source /machine/gempak/NAWIPS/Gemenviron
+
+set LDMHOST=motherlode.ucar.edu
+
+if ( $#argv > 0 ) then
+   set CYCLE=$1
+else
+   set CYCLE=`date -u '+%H'`
+endif
+
+set FDATE=`date -u '+%y%m%d'`"/${CYCLE}00"
+set YMDH=`date -u '+%Y%m%d'`"${CYCLE}"
+
+echo CYCLE is $CYCLE
+
+set DOMAIN_NAME=${YMDH}_12km
+set MODEL_CENTER="model_center_loc.001"
+set GEMNMM=nmm
+set RUNNAME=primary
+
+cd $DATAROOT/${DOMAIN_NAME}
+
+if ( -e wrfpost/grib ) then
+   if ( ! -e gempak ) mkdir gempak
+   cd gempak
+   scp *_${RUNNAME}.gem ldm@data:${MODEL}/wrf
+   cd ..
+   $TOP/${GEMNMM}_gdplot2_output.csh ${YMDH}
+
+   cd wrfpost/grib
+   set FILES=`ls *_nmm_d01.GrbF*`
+   foreach FILE ($FILES)
+      set NEWFILE=`echo $FILE | sed "s@_nmm_d01@_${GEMNMM}@g"`
+      ln -s $FILE $NEWFILE
+   end
+
+   ~ldm/bin/ldmsend -v -l log/ldmsend.log -h $LDMHOST -f SPARE *_${GEMNMM}.GrbF*
+   cd ../..
+endif
+
+if ( ! -d $WRF/logs/runs ) mkdir $WRF/logs/runs
+mv log $WRF/logs/runs/${YMDH}_${GEMNMM}
+#wrf_clean --level 5<<EOF_CLEAN
+#yes
+#EOF_CLEAN
+
+
+exit 
+
+
+
+#wrf_prep --dset tile12 --cycle ${CYCLE}:0:30
+
+#wrf_prep --dset nam218grb2 --cycle 18:0:30 --nfs /data/ldm/nam_12km/YYYYMMDDHHf0FF.grib2
+
+
+exit
+

@@ -1,0 +1,22 @@
+AREA    dset                                                                                                                            
+GAREA   uslcc                                                                                                                           
+SATFIL                                                                                                                                  
+RADFIL                                                                                                                                  
+IMCBAR  31/v/CL/.005;.5/.8;.01                                                                                                          
+SFPARM  mark:15:4:1                                                                                                                     
+DATTIM  all                                                                                                                             
+SFFILE  wseta_region.sfc                                                                                                                
+COLORS  (1-23-1/30-7/EPCP/L)                                                                                                            
+MAP     31/1/1                                                                                                                          
+MSCALE                                                                                                                                  
+LATLON  0                                                                                                                               
+TITLE   5/-1/WSETA Selected Region of Interest                                                                                          
+CLEAR   y                                                                                                                               
+PANEL   0                                                                                                                               
+DEVICE  xw                                                                                                                              
+PROJ    def                                                                                                                             
+FILTER  no                                                                                                                              
+TEXT    .7/2/1/hw                                                                                                                       
+LUTFIL  default                                                                                                                         
+STNPLT                                                                                                                                  
+CLRBAR  0                                                                                                                               

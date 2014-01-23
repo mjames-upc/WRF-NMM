@@ -1,0 +1,108 @@
+ &time_control
+  RUN_DAYS             = 1
+  RUN_HOURS            = 6
+  RUN_MINUTES          = 0
+  RUN_SECONDS          = 0
+  START_YEAR           = 2014
+  START_MONTH          = 01
+  START_DAY            = 17
+  START_HOUR           = 12
+  START_MINUTE         = 00
+  START_SECOND         = 00
+  END_YEAR             = 2014
+  END_MONTH            = 01
+  END_DAY              = 18
+  END_HOUR             = 18
+  END_MINUTE           = 00
+  END_SECOND           = 00
+  INTERVAL_SECONDS     =  10800
+  INPUT_FROM_FILE      = .true.,.true.,.true.
+  FINE_INPUT_STREAM    = 0
+  HISTORY_INTERVAL     = 60, 60, 60
+  FRAMES_PER_OUTFILE   = 1, 1, 1
+  RESTART              = .false.
+  RESTART_INTERVAL     = 10000
+  IO_FORM_HISTORY      = 2
+  IO_FORM_RESTART      = 2
+  IO_FORM_INPUT        = 2
+  IO_FORM_BOUNDARY     = 2
+  DEBUG_LEVEL          = 0
+/
+ &domains
+  TIME_STEP            = 30
+  TIME_STEP_FRACT_NUM  = 0
+  TIME_STEP_FRACT_DEN  = 1
+  MAX_DOM              = 1
+  S_WE                 = 1, 
+  E_WE                 = 102
+  S_SN                 = 1, 
+  E_SN                 = 156
+  S_VERT               = 1, 
+  E_VERT               = 31, 
+  DX                   = 0.039
+  DY                   = 0.038424
+  GRID_ID              = 1, 
+  PARENT_ID            = 1, 
+  I_PARENT_START       = 0, 
+  J_PARENT_START       = 0, 
+  PARENT_GRID_RATIO    = 1, 
+  PARENT_TIME_STEP_RATIO = 1, 
+  FEEDBACK             = 1
+  SMOOTH_OPTION        = 1
+  NPROC_X              = -1
+  NPROC_Y              = -1
+/
+ &physics
+  MP_PHYSICS           = 5,     5,     5
+  RA_LW_PHYSICS        = 1,     1,     1
+  RA_SW_PHYSICS        = 1,     1,     1
+  RADT                 = 10,    10,    10
+  NRADL                = 30
+  NRADS                = 30
+  CO2TF                = 1
+  SF_SFCLAY_PHYSICS    = 1,     1,     1
+  SF_SURFACE_PHYSICS   = 1,     1,     1
+  BL_PBL_PHYSICS       = 1,     1,     1
+  BLDT                 = 5,     5,     5
+  NPHS                 = 10 
+  CU_PHYSICS           = 1,     1,     1
+  NTSBD                = 100
+  CUDT                 = 5,     5,     5
+  NCNVC                = 10
+  ISFFLX               = 1
+  IFSNOW               = 1
+  ICLOUD               = 1
+  SURFACE_INPUT_SOURCE = 1
+  NUM_SOIL_LAYERS      = 5
+  MP_ZERO_OUT          = 0
+  MAXIENS              = 1
+  MAXENS               = 3
+  MAXENS2              = 3
+  MAXENS3              = 16
+  ENSDIM               = 144
+/
+ &dynamics
+  DYN_OPT              = 4
+  RK_ORD               = 3
+  W_DAMPING            = 1
+  DIFF_OPT             = 1
+  KM_OPT               = 4
+  DAMP_OPT             = 0
+  BASE_TEMP            = 290.
+  ZDAMP                = 5000.,  5000.,  5000.
+  DAMPCOEF             = 0.2,    0.2,    0.2
+  KHDIF                = 0,      0,      0
+  KVDIF                = 0,      0,      0
+  NON_HYDROSTATIC      = .true., .true., .true.
+/
+ &bdy_control
+  SPEC_BDY_WIDTH       = 5
+  SPEC_ZONE            = 1
+  RELAX_ZONE           = 4
+  SPECIFIED            = .true., .false., .false.
+  NESTED               = .false., .true., .true.
+/
+ &namelist_quilt
+  NIO_TASKS_PER_GROUP  = 0
+  NIO_GROUPS           = 1
+/
